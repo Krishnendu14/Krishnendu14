@@ -59,11 +59,18 @@
             line-height: 1.5;
             padding: 0 10px; /* Add some padding for mobile */
         }
-    
-   .button {
+
+        
+            h1 {
+                font-size: 3em;
+            }
+            .custom-message {
+                font-size: 1.1em;
+            }
+        .animated-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color:#007bff;
+  background-color: #007bff;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -72,115 +79,30 @@
   cursor: pointer;
   font-family: sans-serif;
   font-size: 16px;
-  /* No hover styles needed */
+  
+  /* Apply the animation here */
+  animation: color-glow 4s infinite linear;
 }
 
-
-button:hover {
-  background-color: #218838;
+/* Define the animation with @keyframes */
+@keyframes color-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Red glow */
+  }
+  25% {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7); /* Yellow glow */
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Green glow */
+  }
+  75% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7); /* Blue glow */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Back to red */
+  }
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    gap: 40px;
-    background: #27282c;
-}
-
-a {
-    position: relative;
-    background: #444;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    padding: 10px 30px;
-    transition: 0.5s;
-}
-
-a:hover {
-    letter-spacing: 0.25;
-    background: var(--clr);
-    box-shadow: 0 0 35px var(--clr);
-}
-
-a::before {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    background: #27282c;
-}
-
-a span {
-    position: relative;
-    z-index: 1;
-}
-
-a i {
-    position: absolute;
-    inset: 0;
-    display: block;
-}
-
-a i::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 100%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #27282c;
-    border: 2px solid var(--clr);
-    transition: 0.5s;
-}
-
-a:hover i::before {
-    left: 0%;
-    transform: translateX(-50%) rotate(45deg);
-    box-shadow: 40px 39px var(--clr);
-}
-
-a i::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #27282c;
-    border: 2px solid var(--clr);
-    transition: 0.5s;
-}
-
-a:hover i::after {
-    left: 100%;
-    transform: translateX(-50%) rotate(-45deg);
-    box-shadow: 38px -39px var(--clr);
-}
-
-        /* Media queries for larger screens if needed, but flexbox and max-width handle much */
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 3em;
-            }
-            .custom-message {
-                font-size: 1.1em;
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -195,6 +117,8 @@ a:hover i::after {
         <p>Gift toh dite pari ni so something unique try korlam😁</p>
         
     </div>
+    <a href="https://impresscrush-codewithvansh.netlify.app/?fbclid=PAVERDUAMlLXpleHRuA2FlbQIxMAABp2F0WZ5wHuu5t0y6ejLkkGhiNmUVMF4HwxmyqnQFFu_Pwc2l4PCo3hGnkhKs_aem_JoTtzITU6EvIwM7ZfYdbXA">I have a qustion to ask" class="animated-button">Go to Another Page</a>
+    
     <a href="https://impresscrush-codewithvansh.netlify.app/?fbclid=PAVERDUAMlLXpleHRuA2FlbQIxMAABp2F0WZ5wHuu5t0y6ejLkkGhiNmUVMF4HwxmyqnQFFu_Pwc2l4PCo3hGnkhKs_aem_JoTtzITU6EvIwM7ZfYdbXA">I have a qustion to ask</a>
     <button onclick="window.location.href='https://impresscrush-codewithvansh.netlify.app/?fbclid=PAVERDUAMlLXpleHRuA2FlbQIxMAABp2F0WZ5wHuu5t0y6ejLkkGhiNmUVMF4HwxmyqnQFFu_Pwc2l4PCo3hGnkhKs_aem_JoTtzITU6EvIwM7ZfYdbXA'">Go to Another Page</button>
 
