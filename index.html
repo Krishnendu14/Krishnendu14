@@ -97,90 +97,81 @@ body {
     background: #27282c;
 }
 
-a {
+          .wave-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     position: relative;
-    background: #444;
+    overflow: hidden;
+    background-color: #34495e; /* Dark background color */
     color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    padding: 10px 30px;
-    transition: 0.5s;
-}
-
-a:hover {
-    letter-spacing: 0.25;
-    background: var(--clr);
-    box-shadow: 0 0 35px var(--clr);
-}
-
-a::before {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    background: #27282c;
-}
-
-a span {
-    position: relative;
-    z-index: 1;
-}
-
-a i {
-    position: absolute;
-    inset: 0;
-    display: block;
-}
-
-a i::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 100%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #27282c;
-    border: 2px solid var(--clr);
-    transition: 0.5s;
-}
-
-a:hover i::before {
-    left: 0%;
-    transform: translateX(-50%) rotate(45deg);
-    box-shadow: 40px 39px var(--clr);
-}
-
-a i::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #27282c;
-    border: 2px solid var(--clr);
-    transition: 0.5s;
-}
-
-a:hover i::after {
-    left: 100%;
-    transform: translateX(-50%) rotate(-45deg);
-    box-shadow: 38px -39px var(--clr);
-}
-
-        /* Media queries for larger screens if needed, but flexbox and max-width handle much */
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 3em;
-            }
-            .custom-message {
-                font-size: 1.1em;
-            }
-        }
+    outline: none;
+    /* Add gradient for folded paper effect */
+    background-image: linear-gradient(135deg, #2c3e50, #1f2b38); /* Darker gradient */
+    animation: shadowMove 10s linear infinite; /* Animation for shadow movement */
+  }
+  
+  @keyframes shadowMove {
+    0% {
+      box-shadow: 
+        0 0 15px 5px rgba(255, 0, 0, 0.5);
+    }
+    10% {
+      box-shadow: 
+        15px 0 15px 5px rgba(255, 0, 0, 0.5),
+        0 15px 15px 5px rgba(255, 127, 0, 0.5),
+        -15px 0 15px 5px rgba(255, 255, 0, 0.5),
+        0 -15px 15px 5px rgba(0, 255, 0, 0.5);
+    }
+    20% {
+      box-shadow: 
+        15px 15px 15px 5px rgba(0, 255, 255, 0.5),
+        -15px 15px 15px 5px rgba(0, 0, 255, 0.5),
+        -15px -15px 15px 5px rgba(127, 0, 255, 0.5),
+        15px -15px 15px 5px rgba(255, 0, 255, 0.5);
+    }
+    30% {
+      box-shadow: 
+        0 15px 15px 5px rgba(255, 0, 127, 0.5),
+        15px 15px 15px 5px rgba(127, 255, 0, 0.5),
+        -15px -15px 15px 5px rgba(0, 255, 127, 0.5),
+        15px -15px 15px 5px rgba(127, 0, 255, 0.5);
+    }
+    
+    40% {
+      box-shadow: 
+        0 0 15px 5px rgba(255, 0, 0, 0.5);
+    }
+    50%{
+      box-shadow: 
+      0 0 15px 5px rgba(127, 0, 255, 0.5);
+    }
+    60%{
+      box-shadow: 
+      0 0 15px 5px rgba(91, 214, 183, 0.5);
+    }
+    70%{
+      box-shadow: 
+      0 0 15px 5px rgba(1, 255, 65, 0.5);
+    }
+    80%{
+      box-shadow: 
+      0 0 15px 5px rgba(229, 255, 0, 0.671);
+    }
+    90%{
+      box-shadow: 
+      0 0 15px 5px rgba(247, 45, 9, 0.712);
+    }
+    100% {
+      box-shadow: 
+        0 0 15px 5px rgba(255, 0, 0, 0.5);
+    }
+  }
+  
+        
+        
     </style>
 </head>
 <body>
@@ -197,7 +188,7 @@ a:hover i::after {
     </div>
     <a href="https://impresscrush-codewithvansh.netlify.app/?fbclid=PAVERDUAMlLXpleHRuA2FlbQIxMAABp2F0WZ5wHuu5t0y6ejLkkGhiNmUVMF4HwxmyqnQFFu_Pwc2l4PCo3hGnkhKs_aem_JoTtzITU6EvIwM7ZfYdbXA">I have a qustion to ask</a>
     <button onclick="window.location.href='https://impresscrush-codewithvansh.netlify.app/?fbclid=PAVERDUAMlLXpleHRuA2FlbQIxMAABp2F0WZ5wHuu5t0y6ejLkkGhiNmUVMF4HwxmyqnQFFu_Pwc2l4PCo3hGnkhKs_aem_JoTtzITU6EvIwM7ZfYdbXA'">Go to Another Page</button>
-
+<button class="wave-button" id="linkedin">Linked IN</button>
     <script>
         const canvas = document.getElementById('equationPlot');
         const ctx = canvas.getContext('2d');
