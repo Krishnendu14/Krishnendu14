@@ -12,6 +12,8 @@
 ![](https://streak-stats.demolab.com/?user=Krishnendu14&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.shion.dev/api/top-langs/?username=Krishnendu14&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
 
+![Snake Animation](https://raw.githubusercontent.com/krishnendu14/ThreeDeeChess/output/github-contribution-grid-snake.svg)
+
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Krishnendu14&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
